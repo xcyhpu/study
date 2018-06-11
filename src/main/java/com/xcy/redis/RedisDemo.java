@@ -17,7 +17,10 @@ public class RedisDemo {
 
     public static void main(String[] args) {
 
-        Jedis jedis = new Jedis();
+
+        /** 尝试获取分布式锁 */
+
+        final Jedis jedis = JedisUtil.getWriteJedisUtil().getJedisPool().getResource();
 
         String lockKey = "redis:distribute:key:businessName:";
 

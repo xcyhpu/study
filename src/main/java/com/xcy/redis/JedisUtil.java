@@ -1,16 +1,16 @@
 package com.xcy.redis;
 
 import com.alibaba.fastjson.JSON;
-import com.huitongjy.common.cached.config.Config;
-import com.huitongjy.common.cached.config.ConfigManager;
-import com.huitongjy.common.cached.config.RedisConfig;
-import com.huitongjy.common.util.LogUtils;
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.collections.MapUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import redis.clients.jedis.*;
+import util.Config;
+import util.ConfigManager;
+import util.LogUtils;
+import util.RedisConfig;
 
 import java.util.*;
 import java.util.regex.Pattern;
