@@ -1,6 +1,11 @@
 package com.xcy.zookeeper;
 
 import org.apache.zookeeper.*;
+import org.apache.zookeeper.data.Stat;
+
+import java.io.UnsupportedEncodingException;
+import java.util.List;
+import java.util.concurrent.CountDownLatch;
 
 import static org.apache.zookeeper.Watcher.Event.EventType.*;
 
@@ -102,6 +107,66 @@ public class ZookeeperDemo {
         }
 
 
+    }
+
+    private CountDownLatch countDownLatch;
+
+    public void process(ZooKeeper zk, WatchedEvent event) {
+        // TODO Auto-generated method stub
+        if (event.getState() == Watcher.Event.KeeperState.SyncConnected) {
+            System.out.println("watcher received event");
+            countDownLatch.countDown();
+        }
+        System.out.println("回调watcher1实例： 路径" + event.getPath() + " 类型："+ event.getType());
+        // 事件类型，状态，和检测的路径
+        Watcher.Event.EventType eventType = event.getType();
+        Watcher.Event.KeeperState state = event.getState();
+        String watchPath = event.getPath();
+        switch (eventType) {
+            case NodeCreated:
+                break;
+            case NodeDataChanged:
+                break;
+            case NodeChildrenChanged:
+                try {
+                    //处理收到的消息
+                    handleMessage(zk, watchPath);
+                } catch (UnsupportedEncodingException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                } catch (KeeperException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                } catch (InterruptedException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                }
+                break;
+            default:
+                break;
+        }
+    }
+
+    public void handleMessage(ZooKeeper zk, String watchPath) throws KeeperException,InterruptedException, UnsupportedEncodingException {
+        System.out.println("收到消息");
+        //再监听该子节点
+        List<String> Children = getChildren(watchPath, zk);
+        for (String a : Children) {
+            String childrenpath = watchPath + "/" + a;
+            byte[] recivedata = zk.getData(childrenpath, false, null);
+            String recString = new String(recivedata, "UTF-8");
+            System.out.println("receive the path:" + childrenpath + ":data:"+ recString);
+            //做完了之后，删除该节点
+            zk.delete(childrenpath, -1);
+        }
+    }
+
+    public List<String> getChildren(String path, ZooKeeper zk) throws KeeperException,InterruptedException {
+        //监听该节点子节点的变化情况
+        return zk.getChildren(path, false);
+    }
+    public Stat setData(String path, byte[] data, int version, ZooKeeper zk)throws KeeperException, InterruptedException {
+        return zk.setData(path, data, version);
     }
 
 
