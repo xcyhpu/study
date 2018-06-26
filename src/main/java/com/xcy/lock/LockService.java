@@ -67,7 +67,7 @@ class Pool {
 
         try {
 
-            if(list.size()>=SIZE) {
+            while(list.size()>=SIZE) {
 
                 System.out.println(name + " :  池子满了等待");
 
@@ -102,7 +102,7 @@ class Pool {
         lock.lock();
 
         try {
-            if(list.isEmpty()) {
+            while(list.isEmpty()) {
 
                 System.out.println(name + " :  池子空了等待");
 
