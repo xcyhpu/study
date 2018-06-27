@@ -84,6 +84,8 @@ public class StreamDemo {
             return prev + next;
         });
 
+        final Integer reduce3 = list2.stream().reduce(0, Integer::sum);
+
         System.out.println("累加结果："+reduce2);
 
 
@@ -96,6 +98,9 @@ public class StreamDemo {
                 .reduce("Prefix_-_-", (prev, next) -> {
                     return prev + next;
                 });
+
+        String concat2 = stringList.stream().reduce(String::concat).get();
+        String concat3 = stringList.stream().reduce("", String::concat);
 
         System.out.println("字符串简单拼接："+concat);
 
