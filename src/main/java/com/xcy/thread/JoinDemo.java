@@ -9,14 +9,17 @@ public class JoinDemo {
 
 
         DemoThread thread1 = new DemoThread(3000, "线程1");
-        DemoThread thread2 = new DemoThread(5000, "线程2");
+        DemoThread thread2 = new DemoThread(10000, "线程2");
 
         thread1.start();
         thread2.start();
 
         try {
             thread1.join();
+            System.out.println("线程1join方法执行完成");
+
             thread2.join();
+            System.out.println("线程2join方法执行完成");
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -32,8 +35,8 @@ class DemoThread extends Thread {
     private long time;
 
     public DemoThread(long time, String name) {
+        super(name);
         this.time = time;
-        super.setName(name);
     }
 
     @Override
