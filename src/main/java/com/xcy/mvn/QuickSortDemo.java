@@ -1,7 +1,7 @@
 package com.xcy.mvn;
 
-import com.xcy.sort.HeapSort;
-import com.xcy.sort.QuickSort;
+//import com.xcy.sort.HeapSort;
+//import com.xcy.sort.QuickSort;
 
 import java.util.Arrays;
 
@@ -10,14 +10,14 @@ import java.util.Arrays;
  */
 public class QuickSortDemo {
 
-    public static void main(String[] args) {
-
-        int[] arr = {3,1,66,44,89,210,5,23};
-//        QuickSort.quickSort(arr, 0, arr.length-1);
-
-        HeapSort.heapSort(arr);
-
-        System.out.println(Arrays.toString(arr));
-
-    }
+//    public static void main(String[] args) {
+//
+//        int[] arr = {3,1,66,44,89,210,5,23};
+////        QuickSort.quickSort(arr, 0, arr.length-1);
+//
+//        HeapSort.heapSort(arr);
+//
+//        System.out.println(Arrays.toString(arr));
+//
+//    }
 }

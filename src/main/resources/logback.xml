@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="3000">
+
+    <!-- 彩色日志依赖的渲染类 -->
+    <conversionRule conversionWord="clr" converterClass="org.springframework.boot.logging.logback.ColorConverter"/>
+    <conversionRule conversionWord="wex"
+                    converterClass="org.springframework.boot.logging.logback.WhitespaceThrowableProxyConverter"/>
+    <conversionRule conversionWord="wEx"
+                    converterClass="org.springframework.boot.logging.logback.ExtendedWhitespaceThrowableProxyConverter"/>
+
+    <!--控制台彩色日志格式-->
+    <property name="CONSOLE_LOG_PATTERN"
+              value="%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} [%X{traceId}] [${HOSTNAME}] [%thread] %-5level %logger{36} - %msg%n"/>
+    <!--文件日志格式-->
+    <property name="FILE_LOG_PATTERN"
+              value="%d{yyyy-MM-dd HH:mm:ss.SSS} [%X{traceId}] [${HOSTNAME}] [%thread] %-5level %logger{36} - %msg%n"/>
+    <!--日志文件路径，文件-->
+    <property name="FILE_PATH" value="${CATALINA.BASE}/logs"/>
+
+
+    <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder charset="UTF-8">
+            <pattern>${CONSOLE_LOG_PATTERN}</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="ALL" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${FILE_PATH}/all.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- daily rollover -->
+            <fileNamePattern>${FILE_PATH}/all.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <!-- keep 7 days' worth of history -->
+            <maxHistory>7</maxHistory>
+        </rollingPolicy>
+        <encoder charset="UTF-8">
+            <pattern>${FILE_LOG_PATTERN}</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="MQ_LOG" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${FILE_PATH}/mq.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- daily rollover -->
+            <fileNamePattern>${FILE_PATH}/mq.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <!-- keep 2 days' worth of history -->
+            <maxHistory>7</maxHistory>
+        </rollingPolicy>
+        <encoder charset="UTF-8">
+            <pattern>${FILE_LOG_PATTERN}</pattern>
+        </encoder>
+    </appender>
+
+    <root level="${maven.log.level}">
+        <appender-ref ref="stdout"/>
+        <appender-ref ref="ALL"/>
+    </root>
+
+    <logger name="org.springframework" level="WARN">
+    </logger>
+
+    <logger name="MQ_LOG" level="DEBUG" additivity="false">
+        <appender-ref ref="MQ_LOG"/>
+    </logger>
+
+</configuration>
