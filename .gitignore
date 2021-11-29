@@ -1,3 +1,5 @@
 /target/**
 /out/**
-.idea
+.idea/**
+CATALINA.BASE_IS_UNDEFINED/*
+.idea/workspace.xml
