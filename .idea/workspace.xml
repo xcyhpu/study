@@ -5,48 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d90ee6ed-23f1-440a-91de-f7198d8205e7" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_xcy_sort_1_0_SNAPSHOT.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__log4j_log4j_1_2_16.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_log4j12_1_6_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Sort/com/xcy/sort/参考网址.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/study.iml" beforeDir="false" afterPath="$PROJECT_DIR$/study.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/SystemRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/xcy/lock/Consumer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/xcy/lock/LockService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/xcy/lock/Pool.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/xcy/lock/Producer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/xcy/mvn/QuickSortDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/xcy/redis/JedisUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/xcy/redis/RedisDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/xcy/reentrant/ReentrantLockService$ComputeTask.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/xcy/reentrant/ReentrantLockService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/xcy/stream/StreamDemo$Person.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/xcy/stream/StreamDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/xcy/thread/DemoThread.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/xcy/thread/JoinDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/xcy/zookeeper/ZookeeperACLUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/xcy/zookeeper/ZookeeperDemo$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/xcy/zookeeper/ZookeeperDemo$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/xcy/zookeeper/ZookeeperDemo$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/xcy/zookeeper/ZookeeperDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/util/Config.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/util/ConfigManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/util/LogUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/util/RedisConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/util/TraceUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/study-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/xcy/mq/TestJsonListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xcy/mq/TestJsonListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
   </component>
   <component name="FavoritesManager">
     <favorites_list name="Sort" />
@@ -76,6 +46,10 @@
     <option name="externalProjectsViewState">
       <projects_view />
     </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$MAVEN_REPOSITORY$/org/apache/rocketmq/rocketmq-spring-boot/2.1.1/rocketmq-spring-boot-2.1.1-sources.jar!/org/apache/rocketmq/spring/annotation/RocketMQMessageListener.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="jar://$MAVEN_REPOSITORY$/com/huitongjy/base/rocketmq/1.1-SNAPSHOT/rocketmq-1.1-20211129.021624-5.jar!/com/huitongjy/base/rocketmq/consumer/MessageTopicTagListenerInit.class" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -110,6 +84,9 @@
         <option value="$PROJECT_DIR$/src/main/java/com/xcy/stream/StreamDemo.java" />
       </list>
     </option>
+  </component>
+  <component name="JRebelWorkspace">
+    <option name="jrebelEnabledAutocompile" value="true" />
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
@@ -297,6 +274,9 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Ignored.Files" />
+  </component>
+  <component name="ReaderModeSettings">
+    <option name="enabled" value="false" />
   </component>
   <component name="RebelAgentSelection">
     <selection>jr</selection>
@@ -701,7 +681,21 @@
       <option name="project" value="LOCAL" />
       <updated>1637924924461</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="cmt">
+      <created>1638150295037</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1638150295037</updated>
+    </task>
+    <task id="LOCAL-00004" summary="merge">
+      <created>1638150330310</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1638150330310</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <option name="trackContextForNewChangelist" value="true" />
     <servers />
   </component>
@@ -788,9 +782,23 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="processedProjectFiles" value="true" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="springboot rocketmq" />
-    <option name="LAST_COMMIT_MESSAGE" value="springboot rocketmq" />
+    <MESSAGE value="cmt" />
+    <MESSAGE value="merge" />
+    <option name="LAST_COMMIT_MESSAGE" value="merge" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="annotation.topic()" language="JAVA" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />

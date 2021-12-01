@@ -8,11 +8,13 @@ import org.apache.rocketmq.common.message.MessageExt;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.nio.charset.StandardCharsets;
+
 /**
  * @author xuchunyang
  * @date 2021-11-26
  */
-@RocketMQMessageTagListener(topic = "${rocketmq.consumer.local.topic}", tag = "${rocketmq.consumer.local.tag}", maxReconsumeTimes = 3)
+@RocketMQMessageTagListener(topic = "${rocketmq.consumer.local.topic}", tag = "${rocketmq.consumer.local.tag}", maxReconsumeTimes = 2)
 public class TestJsonListener extends AbstractJsonMessageListener<User> {
 
     private static final Logger LOG = LoggerFactory.getLogger(TestJsonListener.class);
@@ -41,8 +43,7 @@ public class TestJsonListener extends AbstractJsonMessageListener<User> {
 
     @Override
     public void consumeFailed(MessageExt messageExt) throws Exception {
-
-
+        LogUtils.error(LOG, "重试之后，消费消息失败", "body", new String(messageExt.getBody(), StandardCharsets.UTF_8));
     }
 
     class MyRetryException extends Exception {

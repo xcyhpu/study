@@ -1,5 +1,6 @@
 /target/**
 /out/**
 .idea/**
-CATALINA.BASE_IS_UNDEFINED/*
+CATALINA.BASE_IS_UNDEFINED
 .idea/workspace.xml
+study.iml

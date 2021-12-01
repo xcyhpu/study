@@ -6,7 +6,7 @@ spring:
     allow-bean-definition-overriding: true
 
 rocketmq:
-  env: local_
+  mq_env: local_
   name-server: 172.16.10.45:9876;172.16.10.46:9876
   producer:
     group: ooxx_producer
