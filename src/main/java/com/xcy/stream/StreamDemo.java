@@ -104,8 +104,6 @@ public class StreamDemo {
 
         System.out.println("字符串简单拼接："+concat);
 
-
-
     }
 
     private static class Person {
